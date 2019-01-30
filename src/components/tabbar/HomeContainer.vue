@@ -10,9 +10,9 @@
 
         <!-- 九宫格 改造为 六宫格 -->
         <ul class="mui-table-view mui-grid-view mui-grid-9">
-		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><router-link to="/home/newslist">
 		        <img src="../../images/menu1.png" alt="">
-		        <div class="mui-media-body">新闻资讯</div></a></li>
+		        <div class="mui-media-body">新闻资讯</div></router-link></li>
 		    <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		        <img src="../../images/menu2.png" alt="">
 		        <div class="mui-media-body">图片分享</div></a></li>
@@ -59,7 +59,7 @@
         methods: {
             getLunbotu() { //获取轮播图数据的方法
                 this.$http.get("https://cors-anywhere.herokuapp.com/http://gank.io/api/data/福利/3/2").then(result => {
-                    console.log(result);                  
+                    // console.log(result);                  
                     if(result.status === 200) {
                         // this.lunbotuList = result.body.results; // 暂不使用get方法请求到的图片，因为找不到比较好用的图片api
                     } else {
@@ -87,7 +87,7 @@
         }
         img {
             width: 100%;
-
+            height: 100%;
         }
     }
 }
