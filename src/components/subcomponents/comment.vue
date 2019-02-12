@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { Taost } from 'mint-ui';
+import { Toast } from "mint-ui";
 export default {
     data() {
         return {
