@@ -28,12 +28,22 @@ Vue.filter('dateFormat', function (dataStr, pattern = "YYY-MM-DD HH:MM:SS"){
 })
 
 // 按需导入 Mint-UI 中的组件
-import { Header,Swipe,SwipeItem,Button } from 'mint-ui'
-Vue.component(Header.name, Header)
-Vue.component(Swipe.name, Swipe);
-Vue.component(SwipeItem.name, SwipeItem);
-Vue.component(Button.name, Button);
+// import { Header,Swipe,SwipeItem,Button, Lazyload } from 'mint-ui'
+// Vue.component(Header.name, Header)
+// Vue.component(Swipe.name, Swipe);
+// Vue.component(SwipeItem.name, SwipeItem);
+// Vue.component(Button.name, Button);
 
+// Vue.use(Lazyload);
+
+// 全部导入 Mint-UI 中的组件
+import MintUi from 'mint-ui'
+Vue.use(MintUi)
+import 'mint-ui/lib/style.css'
+
+// 安装图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 // 1.3 导入自己的 router.js 路由模块
 import router from './router.js'

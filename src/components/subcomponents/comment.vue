@@ -26,7 +26,7 @@ export default {
         return {
             pageIndex: 1, //默认展示第一页数据
             commentlist: [], // 评论信息
-            msg: ""
+            msg: "" // 评论输入的内容
         }
     },
     created () {
@@ -54,7 +54,7 @@ export default {
         postComment() { // 发表评论
             // 校验是否为空
             if (this.msg.trim().length === 0) {
-                return Taost("评论内容不能为空！");
+                return Toast("评论内容不能为空！");
             }
             // 参数1： 请求的URL地址
             // 参数2： 提交给服务器的数据对象 { content: this.msg }
