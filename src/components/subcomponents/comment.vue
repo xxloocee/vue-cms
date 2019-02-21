@@ -59,8 +59,8 @@ export default {
             // 参数1： 请求的URL地址
             // 参数2： 提交给服务器的数据对象 { content: this.msg }
             // 参数3： 定义提交时候，表单中数据的格式 { emulateJSON:true } 全局设置之后，此参数可省略
-            this.$http.post('api/postcomment/' + this.$route.params.id, { content: this.msg.trim() }).then(function(result){
-                if (result.body.status === 0) {
+            // this.$http.post('api/postcomment/' + this.$route.params.id, { content: this.msg.trim() }).then(function(result){
+                // if (result.body.status === 0) {
                     // 1.拼接出一个评论对象
                     var cmt = { 
                         user_name: "匿名用户",
@@ -69,8 +69,8 @@ export default {
                     };
                     this.commentlist.unshift(cmt);
                     this.msg = "";
-                }
-            })
+                // }
+            // })
         }
     },
     props: ["id"]
