@@ -2,6 +2,9 @@
 ## 以下为项目笔记
 ### [主流开元协议之间有何异同](https://www.zhihu.com/question/19568896)
 
+## 运行说明
+### 使用cnpm i安装依赖包，完成之后使用npm run dev运行项目
+
 ## 用(传统方式)命令行把修改过的代码上传到github
 1. git add .
 2. git commit -m "提交信息"
